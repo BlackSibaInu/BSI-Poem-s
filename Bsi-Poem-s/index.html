@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Платформа для публикации стихов о жизни и реальности">
+    <meta name="keywords" content="поэзия, стихи, творчество, литература">
+    <title>BSI-Poem's | Платформа поэзии</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">BSI-Poem's</h1>
+        <p class="site-subtitle">Платформа для творческого самовыражения</p>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li><a href="#poems" class="nav__link" data-section="poems">Стихи</a></li>
+            <li><a href="#write" class="nav__link" data-section="write">Написать</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="write" class="section">
+            <form id="poemForm" class="form">
+                <div class="form__group">
+                    <label class="form__label" for="poemTitle">Название</label>
+                    <input type="text" id="poemTitle" class="form__input" required 
+                           minlength="2" maxlength="100">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="poemContent">Текст стихотворения</label>
+                    <textarea id="poemContent" class="form__textarea" rows="10" required 
+                              minlength="10" maxlength="2000"></textarea>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="authorName">Автор</label>
+                    <input type="text" id="authorName" class="form__input" required 
+                           minlength="2" maxlength="50">
+                </div>
+                <button type="submit" class="btn btn--primary">Опубликовать</button>
+            </form>
+        </section>
+
+        <section id="poems" class="poems">
+            <!-- Стихи будут добавляться динамически -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
